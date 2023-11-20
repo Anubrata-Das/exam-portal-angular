@@ -1,0 +1,58 @@
+<h1 style="margin: 18px;">Questions of {{qTitle}}</h1>
+
+<div class="bootstrap-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div  class="container text-center">
+                <button mat-raised-button color="accent" [routerLink]="'/admin/add-question/'+qId+'/'+qTitle">Add Question</button>
+            </div>
+
+
+            <mat-card *ngFor="let q of questions;let i=index" style="margin-top: 20px;">
+                <mat-card-content >
+                    <!-- <h3>
+                        <b>Q {{i+1}} )</b> 
+                        <p style="margin: 10px;" [innerHTML]="q.content"></p>
+                        
+                    </h3> -->
+
+                    <p>
+                        <b>Q {{i+1}})</b> <span style="margin-left: 9px;" [innerHTML]="q.content"></span> 
+                    </p>
+
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><b>a)</b> {{q.option1}}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><b>b)</b> {{q.option2}}</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><b>c)</b> {{q.option3}}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><b>d)</b> {{q.option4}}</p>
+                            </div>
+                        </div>
+
+                        <mat-divider></mat-divider>
+
+                        <p style="margin-top: 10px;"><b>Correct Answer: </b> {{q.answer}}</p>
+
+                    </div>
+                </mat-card-content>
+
+                <mat-card-actions>
+                    <button (click)="deleteQuestion(q.quesId)" mat-button color="warn">Delete</button>
+                    <button [routerLink]="'/admin/question/'+q.quesId" mat-button color="accent">Update</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

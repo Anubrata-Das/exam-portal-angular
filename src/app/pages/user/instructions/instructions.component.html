@@ -1,0 +1,48 @@
+<div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+
+                <mat-card style="margin-top: 20px;">
+                    <mat-card-header>
+
+                        <mat-card-title>
+                            Read the instructions Carefully
+                        </mat-card-title>
+
+                        <mat-card-subtitle>
+                            One More STEP to go
+                        </mat-card-subtitle>
+                    </mat-card-header>
+
+                    <mat-card-content style="margin-top: 20px;">
+
+                        <h1>{{quiz.title}}</h1>
+                        <p>{{quiz.description}}</p>
+
+                        <mat-divider></mat-divider>
+                        <br>
+                        <h1>Important Instructions</h1>
+
+                        <ul>
+                            <li>This quiz is only for practice purpose</li>
+                            <li>You have to submit quiz within <b>{{somoy}} minutes.</b></li>
+                            <li>You can attempt the quiz any number of time</li>
+                            <li>There are <b>{{quiz.numberOfQuestions}}</b> questions in this quiz</li>
+                            <li>Each question carries <b>{{quiz.maxMarks/quiz.numberOfQuestions}}</b> marks</li>
+                            <li>No negative marking for wrong answer</li>
+                            <li>All questions of are MCQ types</li>
+                        </ul>
+
+                    </mat-card-content>
+
+                    <mat-card-actions>
+                        <div style="margin: top 15px;margin-bottom: 15px;" class="container text-center">
+                            <button (click)="startQuiz()" mat-raised-button color="accent">Start Quiz </button>
+                        </div>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

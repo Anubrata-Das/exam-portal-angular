@@ -1,0 +1,50 @@
+<mat-card *ngIf="user">
+    <!-- {{ user | json}} -->
+    <h1 style="margin: 18px;">Your Profile Details</h1>
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+
+            <div class="container text-center">
+
+                <img class="profile-image" src="https://share4all.com/data/avatars/o/0/1.jpg?1633887780" alt="" srcset="">
+
+                <h1 style="margin: top 15px;">{{user.firstName}} {{user.lastName}}</h1>
+
+                <div class="row">
+
+                    <div class="col-md-10 offset-md-1">
+
+                        <!-- table Details -->
+                        <table class="table text-center">
+                            <tr>
+                                <td>Username</td>
+                                <td>{{user.username}}</td>
+                            </tr>
+                            <tr>
+                                <td>ID</td>
+                                <td>EXAM {{user.id}}</td>
+                            </tr>
+                            <tr *ngIf="user.phone">
+                                <td>Phone Number</td>
+                                <td>{{user.phone}}</td>
+                            </tr>
+                            <tr>
+                                <td>ROLE</td>
+                                <td>{{user.authorities[0].authority}}</td>
+                            </tr>
+                            <tr>
+                                <td>STATUS</td>
+                                <td>{{user.enabled?"ACTIVE":"NOT ACTIVE"}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+
+    <div style="margin: top 15px;" class="container text-center">
+        <button [routerLink]="'/user-dashboard/profile/update/'+user.id"  mat-raised-button color="primary">UPDATE</button>
+        <button style="margin-left: 18px;" mat-raised-button color="accent">SHARE</button>
+    </div>
+</mat-card>

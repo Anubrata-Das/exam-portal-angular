@@ -1,0 +1,35 @@
+
+<mat-card class="mat-elevation-z10 " style="background: #2BC0E4;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+    <mat-action-list style="margin: 20px;">
+        <div mat-subheader>Menu</div>
+        <button routerLink="/admin"
+        mat-list-item><mat-icon mat-list-icon class="icon-thik">home</mat-icon><span class="span-text">Home</span></button>
+        
+        <button routerLink="/admin/profile"
+        mat-list-item><mat-icon class="icon-thik " mat-list-icon>account_circle</mat-icon><span class="span-text">Profile</span></button>
+
+        <button routerLink="/admin/categories"
+        mat-list-item><mat-icon class="icon-thik " mat-list-icon>list</mat-icon><span class="span-text">Categories</span></button>
+
+        <button routerLink="/admin/add-category"
+        mat-list-item><mat-icon class="icon-thik " mat-list-icon>add_circle_outline</mat-icon><span class="span-text">Add Categories</span></button>
+
+        <button routerLink="/admin/quizzes"
+        mat-list-item><mat-icon class="icon-thik " mat-list-icon>quiz</mat-icon><span class="span-text">Quizzes</span></button>
+
+        <button routerLink="/admin/add-quiz"
+        mat-list-item><mat-icon class="icon-thik " mat-list-icon>add</mat-icon><span class="span-text">Add Quiz</span></button>
+
+        <button (click)="logout()"  routerLink="/admin/profile"
+        mat-list-item><mat-icon class="icon-thik " mat-list-icon>logout</mat-icon><span class="span-text">Logout</span></button>
+    </mat-action-list>
+</mat-card> 
+
+
+
+
+
+

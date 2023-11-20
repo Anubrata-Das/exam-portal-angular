@@ -1,0 +1,22 @@
+.truncate{
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.example-header-image {
+    background-image: url('https://img.freepik.com/premium-vector/quiz-vector-pop-style-illustration-with-megaphone-yellow-background_194782-902.jpg');
+    background-size: cover;
+}
+
+/* Custom pagination styles */
+.ngx-pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  
+  

@@ -1,0 +1,45 @@
+<mat-card >
+    <h1 style="margin: 18px;">All Users Details</h1>
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+
+            <div class="table-responsive">
+                <table  class="table  table-hover table-dark table-responsive">
+                    <thead>
+                        <tr>
+                            <th scope="row">ID</th>
+                            <th scope="row">USER NAME</th>
+                            <th scope="col">NAME</th>
+                            <th scope="col">EMAIL</th>
+                            <th scope="col">PHONE</th>
+                            <th scope="col">ROLE</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let u of users">
+                            <td>{{u.id}}</td>
+                            <td class="table-success">{{u.username}}</td>
+                            <td>{{u.firstName}} {{u.lastName}}</td>
+                            <td>{{u.email}}</td>
+                            <td>{{u.phone}}</td>
+                            <td>{{u.authorities[0].authority}}</td>
+                            <button 
+        (click)="deleteUser(u.id)"
+        style="margin-left: 10px;" mat-raised-button color="warn">Delete</button>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </mat-card-content>
+
+    <!-- <div style="margin: top 15px;" class="container text-center">
+        <button type="submit" mat-raised-button color="primary">UPDATE</button>
+        <button style="margin-left: 18px;" mat-raised-button color="accent">SHARE</button>
+    </div> -->
+</mat-card>
+
+

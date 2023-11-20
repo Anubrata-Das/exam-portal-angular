@@ -1,0 +1,166 @@
+<!-- 
+
+<div class="bootstrap-wrapper">
+
+    <div class="container">
+        <div class="row" style="margin-top:10px;">
+
+            <div class="col-md-6 offset-md-3">
+            <mat-card class="matt"  style="background-color: rgb(237, 247, 255);">   
+                <div class="container text-center">
+                    <img style="height:110px; width:110px" src="../../../assets/logo.png" alt="" srcset="">
+                </div>
+                <h1 class="text-center">Register Here !!</h1>
+                
+                <form (ngSubmit)="formSubmit()" >
+
+                   
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <input required=""
+                        [(ngModel)]="user.username"
+                        name="username"
+                        matInput placeholder="Username has to be Unique !!"/>
+                        
+                    </mat-form-field>
+
+                   
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input required
+                        [(ngModel)]="user.password"
+                        name="password"
+                        
+                        type="password" matInput placeholder="Enter here"/>
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input required
+                        
+                        [(ngModel)]="user.firstName"
+                        name="firstName"
+                        matInput placeholder="Enter here">
+                    </mat-form-field>
+
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input required
+                        [(ngModel)]="user.lastName"
+                        name="lastName"
+                        matInput placeholder="Enter here">
+                    </mat-form-field>
+
+  
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input required=""
+                        [(ngModel)]="user.email"
+                        name="email"
+                        type="email" matInput placeholder="Enter here"/>
+                    </mat-form-field>
+
+                  
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Phone</mat-label>
+                        <input required
+                        [(ngModel)]="user.phone"
+                        name="phone"
+                        type="number" matInput placeholder="Enter here"/>
+                    </mat-form-field>
+
+                    <div class="container text-center">
+
+                        <button type="submit" mat-raised-button color="primary" style="background: #f2709c;  /* fallback for old browsers */
+                        background: -webkit-linear-gradient(to right, #ff9472, #f2709c);  /* Chrome 10-25, Safari 5.1-6 */
+                        background: linear-gradient(to right, #ff9472, #f2709c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                        ">Register</button>
+                        <button type="reset" style="margin-left: 18px;" mat-raised-button color="accent">Clear</button>
+
+                    </div>
+                </form>
+            </mat-card> 
+            </div>
+            
+
+        </div>
+    </div>
+
+</div> -->
+
+<div style ="display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+margin: 23px;" class="bootstrap-wrapper">
+
+<div class="box1">
+    <span class="borderline"></span>
+    <form (ngSubmit)="formSubmit()" >
+        <h2>Sign up</h2>
+
+        <div class="inputbox">
+            <input type="text" required [(ngModel)]="user.username"
+            name="username" >
+            <span>Username</span>
+            <i></i>
+        </div>
+
+        <div class="inputbox">
+            <input required
+                        [(ngModel)]="user.password"
+                        name="password"
+                        type="password" matInput/>
+            <span>Password</span>
+            <i></i>
+        </div>
+
+        <div class="inputbox">
+            <input required
+                        
+                        [(ngModel)]="user.firstName"
+                        name="firstName"
+                        matInput >
+            <span>First Name</span>
+            <i></i>
+        </div>
+
+        <div class="inputbox">
+            <input required
+                        [(ngModel)]="user.lastName"
+                        name="lastName" >
+            <span>Last Name</span>
+            <i></i>
+        </div>
+
+        <div class="inputbox">
+            <input required
+                        [(ngModel)]="user.email"
+                        name="email"
+                        type="email" >
+            <span>Email</span>
+            <i></i>
+        </div>
+
+        <div class="inputbox">
+            <input [(ngModel)]="user.phone"
+            name="phone"
+            type="number" required>
+            <span>Mobile Number</span>
+            <i></i>
+        </div>
+        
+        <div class="sc" style="display: flex;justify-content: space-between; align-items: center;margin-top: 22px;">
+
+            <button type="submit" mat-raised-button color="primary" style="background: #f2709c;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #ff9472, #f2709c);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #ff9472, #f2709c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            ">Register</button>
+            <button type="reset" style="margin-left: 18px;" mat-raised-button color="accent">Clear</button>
+
+        </div>
+
+    </form>
+</div>
+</div>

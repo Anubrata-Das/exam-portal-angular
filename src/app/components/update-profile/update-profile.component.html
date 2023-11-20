@@ -1,0 +1,12 @@
+<form (ngSubmit)="updateProfile()">
+    <label for="firstName">First Name</label>
+    <input type="text" id="firstName" [(ngModel)]="profile.firstName" name="firstName" required>
+  
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName" [(ngModel)]="profile.lastName" name="lastName" required>
+  
+    <!-- Add more input fields for other profile properties -->
+  
+    <button type="submit">Update Profile</button>
+  </form>
+  

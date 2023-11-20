@@ -1,0 +1,119 @@
+<!-- 
+<div class="bootstrap-wrapper" >
+
+    <div class="container">
+        <div class="row" style="margin-top:10px;">
+
+            <div class="col-md-6 offset-md-3">
+                <mat-card class="matt" style="background-color: rgb(237, 247, 255);">
+                <div class="container text-center">
+                    <img style="height:110px; width:110px; padding-top:5px" src="../../../assets/login.png" alt="" srcset="">
+                </div>
+                <h1 class="text-center">Login !!</h1>
+
+              
+                <form (ngSubmit)="formSubmit()"  >
+                  
+                    <mat-form-field class="full-width" appearance="outline" >
+                        <mat-label>Username</mat-label>
+                        <input
+                        [(ngModel)]="loginData.username"
+
+                        
+                        required=""                       
+                        name="username"
+                        matInput placeholder="Enter Valid Username here"/>
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input 
+                        [(ngModel)]="loginData.password"
+                        required="" type="password"                      
+                        name="password"
+                        matInput placeholder="Enter your password here"/>
+                    </mat-form-field>
+
+                    <div class="container text-center">
+                        <button type="submit" mat-raised-button color="primary" style="background: #FC354C;  /* fallback for old browsers */
+                        background: -webkit-linear-gradient(to right, #0ABFBC, #FC354C);  /* Chrome 10-25, Safari 5.1-6 */
+                        background: linear-gradient(to right, #0ABFBC, #FC354C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                        
+                        ">Login</button>
+                        <button type="reset" style="margin-left: 18px;" mat-raised-button color="accent" >Clear</button>
+                    </div>
+                
+                </form>
+            </mat-card>
+            </div>
+
+        </div>
+    </div>
+
+</div> -->
+
+<div style ="display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+margin: 23px;" class="bootstrap-wrapper">
+
+    <div class="box">
+        <span class="borderline"></span>
+        <form  (ngSubmit)="formSubmit()">
+            <h2>Sign in</h2>
+
+            <div class="inputbox">
+                <input [(ngModel)]="loginData.username"                     
+                        name="username"  required>
+                <span>Username</span>
+                <i></i>
+            </div>
+
+            <div class="inputbox">
+                <input [(ngModel)]="loginData.password"
+                        required="" type="password"                      
+                        name="password" required>
+                <span>Password</span>
+                <i></i>
+            </div>
+            
+            <div class="sc" style="display: flex;justify-content: space-between; align-items: center;margin-top: 22px;">
+                <button type="submit" mat-raised-button color="primary" style="background: #FC354C;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #0ABFBC, #FC354C);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #0ABFBC, #FC354C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                
+                ">Login</button>
+                <button type="reset" style="margin-left: 18px;" mat-raised-button color="accent" >Clear</button>
+                <button mat-raised-button  style="margin-left: 18px;background: linear-gradient(to right, #53ff70, #ca431d);" (click)="openForgotPasswordModal()">Forgot?</button>
+
+                <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Launch demo modal
+                </button> -->
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+<!-- modal html  -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div> -->

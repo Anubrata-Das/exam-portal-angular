@@ -1,0 +1,46 @@
+
+
+<!-- <div class="bootstrap-wrapper">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <app-sidebar></app-sidebar>
+            </div>
+            <div class="col-md-10">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>  -->
+
+<mat-drawer-container class="example-container" autosize style="background: #f2709c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ff9472, #f2709c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ff9472, #f2709c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <button (click)="drawer.toggle()" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <app-sidebar></app-sidebar>
+    
+    
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+
+        <button (click)="drawer.toggle()" mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <router-outlet></router-outlet>
+    
+    </div>
+
+</mat-drawer-container>
+
+
+
+
+

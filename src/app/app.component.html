@@ -1,0 +1,11 @@
+<ngx-ui-loader
+
+fgsColor="#DC143C" fgsType="square-jelly-box" [fgsSize]="80" pbColor="#e6085c" [pbThickness]="2" text="Please wait" textColor="#FFFFFF" textPosition="center-center"></ngx-ui-loader>
+
+<div ngxUiLoaderBlurred >
+    <!-- This page content will be blurred/frosted when foreground loader is showed -->
+    <app-navbar></app-navbar>
+    
+    <router-outlet></router-outlet>
+    
+</div>

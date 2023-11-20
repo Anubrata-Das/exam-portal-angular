@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background:#23242a; 
+    /* background: -webkit-linear-gradient(to right, #bfe9ff, #ff6e7f);  
+    background: linear-gradient(to right, #bfe9ff, #ff6e7f); */
+     }
+
+.text-center{
+    text-align: center;
+}
+.matt{
+    padding: 0px 10px 10px 10px;
+    background-color:aqua;
+}
+
+

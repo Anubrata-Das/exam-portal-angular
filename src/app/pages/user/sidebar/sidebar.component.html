@@ -1,0 +1,21 @@
+<mat-card style="background-image: linear-gradient( 135deg, #FFE985 10%, #FA742B 100%);">
+    <mat-action-list style="margin: 20px;">
+        <div mat-subheader>Categories</div>
+
+        <button routerLink="/user-dashboard/profile"
+        mat-list-item><mat-icon mat-list-icon class="icon-thik">home</mat-icon><span class="span-text">Home</span></button>
+
+        <button routerLink="/user-dashboard/0"
+        mat-list-item><mat-icon mat-list-icon class="icon-thik">quiz</mat-icon><span class="span-text">All quizzes</span></button>
+        
+        <button [routerLink]="'/user-dashboard/'+c.cid"
+        mat-list-item *ngFor="let c of categories "><mat-icon class="icon-thik " mat-list-icon>quiz</mat-icon><span class="span-text">{{c.title}}</span></button>
+
+        <!-- <div>
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div> -->
+        
+    </mat-action-list>
+</mat-card>
+
+<!-- {{categories | json}} -->

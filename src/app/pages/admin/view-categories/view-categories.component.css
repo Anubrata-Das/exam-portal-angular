@@ -1,0 +1,15 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.icon-thik{
+    margin: -4px;
+    margin-left: 3px;
+    margin-top: 1px;
+    padding:2.5px;
+}
+
+.span-text{
+    margin:12px;
+    
+}

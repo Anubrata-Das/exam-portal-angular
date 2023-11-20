@@ -1,0 +1,64 @@
+<mat-card>
+    <h1 style="margin: 18px;">Update Your Profile</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+
+                <form (submit)="updateData()">
+
+                    <!-- title field -->
+                    <mat-form-field style="width:100%" appearance="fill">
+                        <mat-label>Enter Username</mat-label>
+                        <input 
+                        [(ngModel)]="user.username"
+                        type="text" name="username" matInput placeholder="Enter title here">
+                    </mat-form-field>
+
+                    <mat-form-field style="width:100%" appearance="fill">
+                        <mat-label>Enter password</mat-label>
+                        <input 
+                        [(ngModel)]="user.password"
+                        type="text" name="password" matInput placeholder="Enter title here">
+                    </mat-form-field>
+
+                    <mat-form-field style="width:100%" appearance="fill">
+                        <mat-label>Enter First name</mat-label>
+                        <input 
+                        [(ngModel)]="user.firstName"
+                        type="text" name="firstName" matInput placeholder="Enter title here">
+                    </mat-form-field>
+
+                    <mat-form-field style="width:100%" appearance="fill">
+                        <mat-label>Enter Last name</mat-label>
+                        <input 
+                        [(ngModel)]="user.lastName"
+                        type="text" name="lastName" matInput placeholder="Enter title here">
+                    </mat-form-field>
+
+                    <mat-form-field style="width:100%" appearance="fill">
+                        <mat-label>Enter email</mat-label>
+                        <input 
+                        [(ngModel)]="user.email"
+                        type="text" name="email" matInput placeholder="Enter title here">
+                    </mat-form-field>
+
+                    <mat-form-field style="width:100%" appearance="fill">
+                        <mat-label>Enter phone number</mat-label>
+                        <textarea 
+                        [(ngModel)]="user.phone"
+                        rows="1"
+                        type="text" name="phone" matInput placeholder="Enter description here"></textarea>
+                    </mat-form-field>
+
+
+
+                    <div style="margin: top 15px;margin-bottom: 15px;" class="container text-center">
+                        <button mat-raised-button color="accent">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</mat-card>
+
+<!-- {{quizData | json}} -->

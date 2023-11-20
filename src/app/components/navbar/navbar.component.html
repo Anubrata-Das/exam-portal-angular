@@ -1,0 +1,62 @@
+<mat-toolbar style="background: #ff00cc;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #333399, #ff00cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+" color="primary">
+
+    <!-- <span>Exam Portal</span> -->
+    <a (click)="logout()"
+    routerLink="/" class="docs-button mdc-button mat-mdc-button mat-unthemed mat-mdc-button-base example-icon" aria-label="Example icon-button with menu icon">
+    <img  matbuttonicon="" src="../../../assets/home.png" alt="angular" >
+    Pariksha
+    </a>
+    <span class="example-spacer"></span>
+
+    <!-- <a routerLink="/login" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>login</mat-icon>
+    </a> -->
+    <!-- <a routerLink="/signup" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>add</mat-icon>
+    </a> -->
+
+    <!-- For login -->
+    <a  
+    *ngIf="!isloggedIn"
+
+    routerLink="/login" class="docs-button mdc-button mat-mdc-button mat-unthemed mat-mdc-button-base example-icon" aria-label="Example icon-button with menu icon">
+    <img  matbuttonicon="" src="../../../assets/lg.png" alt="angular" >
+    Login
+    </a>
+
+    <!-- For signup -->
+    <a  
+    *ngIf="!isloggedIn"
+
+    routerLink="/signup" class="docs-button mdc-button mat-mdc-button mat-unthemed mat-mdc-button-base example-icon" aria-label="Example icon-button with menu icon"><img matbuttonicon="" src="../../../assets/rr.png" alt="angular" >Register
+    </a>
+
+    <!-- For Showing user -->
+    <a  
+    
+    *ngIf="isloggedIn && user" 
+    routerLink="/admin/profile"
+    style="margin-right: 10px;"
+    class="docs-button mdc-button mat-mdc-button mat-unthemed mat-mdc-button-base example-icon" 
+    aria-label="Example icon-button with menu icon">
+    <span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span>
+    <img  matbuttonicon="" src="../../../assets/usern.png" alt="angular" >
+    <!-- {{ login.getUser().userName}} -->
+    {{ user.username }}
+    </a>
+
+
+    <!-- For Logout -->
+    <a  
+    (click)="logout()"
+    *ngIf="isloggedIn"
+    style="color: aliceblue;"
+    class="docs-button mdc-button mat-mdc-button mat-unthemed mat-mdc-button-base example-icon" aria-label="Example icon-button with menu icon">
+    <span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span>
+    <img  matbuttonicon="" src="../../../assets/logout.png" alt="angular" >Logout
+    </a>
+    
+</mat-toolbar>

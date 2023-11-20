@@ -1,0 +1,42 @@
+.home{
+    background-color:yellowgreen;
+    /* background: url(../../../assets/exam.mp4); */
+    height:100vh;
+}
+
+.video-wrapper {
+    /* Telling our absolute positioned video to 
+    be relative to this element */
+    height:100vh;
+    position: relative;
+    
+
+    /* Will not allow the video to overflow the 
+    container */
+    overflow: hidden; 
+    /* Centering the container's content vertically 
+    and horizontally */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+video {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* background: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)); */
+}
+.header{
+    position: relative;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+}
+
+@media screen and (max-width:480px){
+    
+}

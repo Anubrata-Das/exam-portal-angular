@@ -1,0 +1,40 @@
+<!-- <div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-2.6">
+                <app-sidebar-user></app-sidebar-user>
+            </div>
+
+            <div class="col-md-9">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<mat-drawer-container class="example-container" autosize style="background-color: #85FFBD;
+background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+
+">
+
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <button (click)="drawer.toggle()" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <app-sidebar-user></app-sidebar-user>
+    
+    
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+
+        <button (click)="drawer.toggle()" mat-icon-button color="warn" aria-label="Example icon button with a menu icon">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <router-outlet></router-outlet>
+    
+    </div>
+
+</mat-drawer-container>
